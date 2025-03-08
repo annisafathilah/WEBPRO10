@@ -1,0 +1,21 @@
+<?php
+function fibonacci($n) {
+    $angka_awal = [0, 1];
+    for ($i = 2; $i < $n; $i++) {
+        $angka_awal[$i] = $angka_awal[$i - 1] + $angka_awal[$i - 2];
+    }
+    return $angka_awal;
+}
+
+$nama = "Annisa Fathilah";
+$n = 30;
+$angka_awal = fibonacci($n);
+
+for ($i = 0; $i < $n; $i++) {
+    if ($i == 2) {
+        echo ($i + 1) . ". " . $angka_awal[$i] . " - " . $nama . "<br>";
+    } else {
+        echo ($i + 1) . ". " . $angka_awal[$i] . "<br>";
+    }
+}
+?>
